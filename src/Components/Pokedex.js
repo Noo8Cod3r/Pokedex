@@ -3,17 +3,18 @@ import Pokecard from './Pokecard';
 import'./Pokedex.css'
 
 
+
 export default class Pokedex extends Component {
     static defaultProps = {
         pokemon : [
-            { id: 4, name: 'Charmander', type: 'Fire', exp: 62 },
-            { id: 7, name: 'Squirtle', type: 'Water', exp: 63 },
-            { id: 11, name: 'Metapod', type: 'Bug', exp: 72 },
-            { id: 12, name: 'Butterfree', type: 'Flying', exp: 178 },
-            { id: 25, name: 'Pikachu', type: 'Electric', exp: 112 },
-            { id: 39, name: 'Jigglypuff', type: 'Normal', exp: 95 },
-            { id: 94, name: 'Gengar', type: 'Poison', exp: 225 },
-            { id: 133, name: 'Eevee', type: 'Normal', exp: 65 }
+            { id: 34, name: 'Nidoking', type: 'Poison', exp: 505 },
+            { id: 9, name: 'Blastoise', type: 'Water', exp: 530 },
+            { id: 6, name: 'Charizard', type: 'Fire', exp: 534 },
+            { id: 15, name: 'Beedrill', type: 'Bug', exp: 395 },
+            { id: 26, name: 'Raichu', type: 'Electric', exp: 485 },
+            { id: 53, name: 'Persian', type: 'Normal', exp: 440 },
+            { id: 150, name: 'Mewtwo', type: 'Psychic', exp: 680 },
+            { id: 136, name: 'Flareon', type: 'Fire', exp: 525 }
         ]
     };
 
@@ -23,6 +24,7 @@ export default class Pokedex extends Component {
             <div className = 'Pokedex-cards'>
             {this.props.pokemon.map((p) => (
               <Pokecard 
+                key={p.id}
                 id={p.id}
                 name={p.name}
                 type={p.type}
