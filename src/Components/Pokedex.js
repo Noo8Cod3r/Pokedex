@@ -21,6 +21,7 @@ export default class Pokedex extends Component {
     render() {
         return (
           <div className = 'Pokedex'>
+            <p>Total Experience: { this.props.exp } </p>
             <div className = 'Pokedex-cards'>
             {this.props.pokemon.map((p) => (
               <Pokecard 
