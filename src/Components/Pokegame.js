@@ -9,11 +9,9 @@ export default class Pokegame extends Component {
         { id: 34, name: 'Nidoking', type: 'Poison', base_exp: 505 },
         { id: 9, name: 'Blastoise', type: 'Water', base_exp: 530 },
         { id: 6, name: 'Charizard', type: 'Fire', base_exp: 534 },
-        { id: 15, name: 'Beedrill', type: 'Bug', base_exp: 395 },
         { id: 26, name: 'Raichu', type: 'Electric', base_exp: 485 },
         { id: 53, name: 'Persian', type: 'Normal', base_exp: 440 },
-        { id: 150, name: 'Mewtwo', type: 'Psychic', base_exp: 680 },
-        { id: 136, name: 'Flareon', type: 'Fire', base_exp: 525 }
+        { id: 150, name: 'Mewtwo', type: 'Psychic', base_exp: 680 }
     ]
 };
     render() {
@@ -35,12 +33,12 @@ export default class Pokegame extends Component {
         return (
             <div>
               <div>
-                <h1>Player 1</h1>
-               <Pokedex pokemon = {player1} exp={ exp1 }/>
+                <h2>Player 1</h2>
+               <Pokedex pokemon = {player1} exp={ exp1 } isWinner={ exp1 > exp2 } />
               </div>
               <div>
-                <h1>Player 2</h1>
-                <Pokedex pokemon = {player2} exp= { exp2 } /> 
+                <h2>Player 2</h2>
+                <Pokedex pokemon = {player2} exp= { exp2 } isWinner={ exp2 > exp1 }/> 
               </div>
                  
             </div>

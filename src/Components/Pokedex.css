@@ -3,3 +3,11 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.Pokegame-winner {
+    color: #4caf50;
+}
+
+.Pokegame-loser {
+    color: red;
+}
